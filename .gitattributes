@@ -1,0 +1,4 @@
+# Line endings normalised in the repository; shell scripts always LF
+* text=auto
+*.sh text eol=lf
+*.ps1 text eol=crlf

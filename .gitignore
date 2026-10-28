@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# F.A.C. V2 bootloader - CMake project (STM32Cube for VS Code), STM32F072CBT6
+# ---------------------------------------------------------------------------
+
+# --- Build output ----------------------------------------------------------
+# CMake build trees, one folder per preset
+/build/
+# Host unit tests build tree
+/tests/build/
+
+# Object files and build products anywhere else
+*.o
+*.obj
+*.d
+*.su
+*.cyclo
+*.elf
+*.bin
+*.hex
+*.srec
+*.map
+*.list
+*.lss
+*.a
+*.gcno
+*.gcda
+
+# --- CubeMX ----------------------------------------------------------------
+# Backups written next to the .ioc when the code is regenerated
+*.ioc.bak
+*.ioc.old
+.mxproject.bak
+
+# --- Editors / IDEs --------------------------------------------------------
+# VS Code: only the shared, machine independent files are tracked
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+*.rej
+
+# --- OS junk ---------------------------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+# --- Misc ------------------------------------------------------------------
+*.log
+*.stackdump
+
+# --- Personal debug configurations -----------------------------------------
+# A .launch pins the serial number of one specific ST-LINK and embeds absolute
+# paths of one machine, so it is useless on any other setup.
+*.launch
+*.cfg
+
+# --- CubeMX linker script --------------------------------------------------
+# CubeMX recreates it at every "Generate Code"; the build links with fac_bootloader.ld
+/STM32F072xx_FLASH.ld
